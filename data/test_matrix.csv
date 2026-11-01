@@ -1,0 +1,10 @@
+case_id,name,hash_expected,hmac_expected,aead_expected,notes
+TC01,Nguyên vẹn,ACCEPT,ACCEPT,ACCEPT,"Kiểm tra tệp/gói nguyên vẹn. Đây là control, không thuộc mẫu số tỷ lệ phát hiện."
+TC02,Sửa nội dung giữ bằng chứng cũ,REJECT,REJECT,REJECT,"Hash/HMAC: dùng tampered_path với digest/tag gốc. AEAD: sửa bản mã sau encrypt, không mã hóa lại."
+TC03,Thay cả tệp và SHA-256 được gửi kèm,ACCEPT_UNTRUSTED,NOT_APPLICABLE,NOT_APPLICABLE,Mô phỏng nhận hash do bên sửa tệp cung cấp; không dùng trusted manifest làm giá trị nhận. Không phải va chạm.
+TC04,Khóa sai,NOT_APPLICABLE,REJECT,REJECT,Giữ thông điệp/gói và tag gốc; chỉ thay khóa lúc xác minh/giải mã.
+TC05,Thẻ HMAC bị sửa,NOT_APPLICABLE,REJECT,NOT_APPLICABLE,B tự sinh thẻ gốc rồi lật một bit của thẻ; giữ tệp và khóa.
+TC06,Thẻ AEAD bị sửa,NOT_APPLICABLE,NOT_APPLICABLE,REJECT,C tự tạo gói gốc rồi lật một bit thẻ. Tách thẻ theo định dạng API thực tế.
+TC07,Metadata bị sửa,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,REJECT,Profile mặc định hash/HMAC chỉ bảo vệ tệp. AEAD dùng bytes metadata làm AAD. Không tính metadata ngoài phạm vi là lỗi phát hiện.
+TC08,Nonce AEAD sai,NOT_APPLICABLE,NOT_APPLICABLE,REJECT,Giữ bản mã/thẻ và khóa; thay nonce lúc decrypt. Đây là ca bổ sung.
+TC09,Cắt ngắn nội dung,REJECT,REJECT,REJECT,Bỏ một byte cuối của tệp cho hash/HMAC hoặc của gói mã hóa cho AEAD. Bỏ qua tệp rỗng. Đây là ca bổ sung.

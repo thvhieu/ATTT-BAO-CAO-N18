@@ -1,0 +1,13 @@
+{
+  "dataset_version": "1.0.0",
+  "public_test_keys_not_secrets": true,
+  "hmac_key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "hmac_wrong_key_hex": "010102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "aead_key_hex": "202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+  "aead_wrong_key_hex": "212122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+  "aead_example_profile": "AES-256-GCM",
+  "nonce_size_bytes": 12,
+  "tag_size_bytes": 16,
+  "nonce_policy": "Do not store a fixed nonce here. Generate a fresh nonce for every encryption; save it with that packet. Mutated verification cases reuse the original packet, not re-encryption.",
+  "key_policy": "These public keys are fixture inputs only, never secrets. For each independent encryption run, prefer a fresh generated key."
+}

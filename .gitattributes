@@ -1,0 +1,13 @@
+# Fixture bytes must be identical on Windows, Linux and macOS.
+data/samples/** -text whitespace=cr-at-eol
+data/tampered/** -text whitespace=cr-at-eol
+data/metadata/** -text
+data/digests/** -text
+data/benchmark/** -text
+data/*.json -text
+data/*.csv -text
+*.py text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf

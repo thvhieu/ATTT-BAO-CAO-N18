@@ -1,0 +1,128 @@
+{
+  "dataset_version": "1.0.0",
+  "kind": "expected outcomes only",
+  "profile": {
+    "hash": "SHA-256(file_bytes)",
+    "hmac": "HMAC-SHA-256(file_bytes)",
+    "aead": "AEAD(plaintext=file_bytes, associated_data=metadata_file_bytes)"
+  },
+  "cases": [
+    {
+      "case_id": "TC01",
+      "name": "Nguyên vẹn",
+      "applies_to": "ALL",
+      "operation": "none",
+      "expected": {
+        "hash": "ACCEPT",
+        "hmac": "ACCEPT",
+        "aead": "ACCEPT"
+      },
+      "is_control": true,
+      "notes": "Kiểm tra tệp/gói nguyên vẹn. Đây là control, không thuộc mẫu số tỷ lệ phát hiện."
+    },
+    {
+      "case_id": "TC02",
+      "name": "Sửa nội dung giữ bằng chứng cũ",
+      "applies_to": "ALL",
+      "operation": "flip_payload_bit",
+      "expected": {
+        "hash": "REJECT",
+        "hmac": "REJECT",
+        "aead": "REJECT"
+      },
+      "is_control": false,
+      "notes": "Hash/HMAC: dùng tampered_path với digest/tag gốc. AEAD: sửa bản mã sau encrypt, không mã hóa lại."
+    },
+    {
+      "case_id": "TC03",
+      "name": "Thay cả tệp và SHA-256 được gửi kèm",
+      "applies_to": "HASH",
+      "operation": "replace_payload_and_hash",
+      "expected": {
+        "hash": "ACCEPT_UNTRUSTED",
+        "hmac": "NOT_APPLICABLE",
+        "aead": "NOT_APPLICABLE"
+      },
+      "is_control": false,
+      "notes": "Mô phỏng nhận hash do bên sửa tệp cung cấp; không dùng trusted manifest làm giá trị nhận. Không phải va chạm."
+    },
+    {
+      "case_id": "TC04",
+      "name": "Khóa sai",
+      "applies_to": "KEYED",
+      "operation": "wrong_key",
+      "expected": {
+        "hash": "NOT_APPLICABLE",
+        "hmac": "REJECT",
+        "aead": "REJECT"
+      },
+      "is_control": false,
+      "notes": "Giữ thông điệp/gói và tag gốc; chỉ thay khóa lúc xác minh/giải mã."
+    },
+    {
+      "case_id": "TC05",
+      "name": "Thẻ HMAC bị sửa",
+      "applies_to": "HMAC",
+      "operation": "flip_hmac_tag_bit",
+      "expected": {
+        "hash": "NOT_APPLICABLE",
+        "hmac": "REJECT",
+        "aead": "NOT_APPLICABLE"
+      },
+      "is_control": false,
+      "notes": "B tự sinh thẻ gốc rồi lật một bit của thẻ; giữ tệp và khóa."
+    },
+    {
+      "case_id": "TC06",
+      "name": "Thẻ AEAD bị sửa",
+      "applies_to": "AEAD",
+      "operation": "flip_aead_tag_bit",
+      "expected": {
+        "hash": "NOT_APPLICABLE",
+        "hmac": "NOT_APPLICABLE",
+        "aead": "REJECT"
+      },
+      "is_control": false,
+      "notes": "C tự tạo gói gốc rồi lật một bit thẻ. Tách thẻ theo định dạng API thực tế."
+    },
+    {
+      "case_id": "TC07",
+      "name": "Metadata bị sửa",
+      "applies_to": "ALL",
+      "operation": "replace_aad",
+      "expected": {
+        "hash": "ACCEPT_METADATA_OUTSIDE_SCOPE",
+        "hmac": "ACCEPT_METADATA_OUTSIDE_SCOPE",
+        "aead": "REJECT"
+      },
+      "is_control": false,
+      "notes": "Profile mặc định hash/HMAC chỉ bảo vệ tệp. AEAD dùng bytes metadata làm AAD. Không tính metadata ngoài phạm vi là lỗi phát hiện."
+    },
+    {
+      "case_id": "TC08",
+      "name": "Nonce AEAD sai",
+      "applies_to": "AEAD",
+      "operation": "wrong_nonce",
+      "expected": {
+        "hash": "NOT_APPLICABLE",
+        "hmac": "NOT_APPLICABLE",
+        "aead": "REJECT"
+      },
+      "is_control": false,
+      "notes": "Giữ bản mã/thẻ và khóa; thay nonce lúc decrypt. Đây là ca bổ sung."
+    },
+    {
+      "case_id": "TC09",
+      "name": "Cắt ngắn nội dung",
+      "applies_to": "ALL_NONEMPTY",
+      "operation": "truncate_one_byte",
+      "expected": {
+        "hash": "REJECT",
+        "hmac": "REJECT",
+        "aead": "REJECT"
+      },
+      "is_control": false,
+      "notes": "Bỏ một byte cuối của tệp cho hash/HMAC hoặc của gói mã hóa cho AEAD. Bỏ qua tệp rỗng. Đây là ca bổ sung."
+    }
+  ]
+}
