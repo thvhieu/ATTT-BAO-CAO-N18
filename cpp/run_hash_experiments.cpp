@@ -1,4 +1,3 @@
-// Thực thi bộ kiểm thử 9 tình huống (TC01–TC09) và thực nghiệm cho cơ chế Hash thuần — C++17 (Thành viên A).
 #include "hash_checker.hpp"
 #include "manifest_io.hpp"
 
@@ -140,7 +139,6 @@ int run_all_experiments_cpp(
         << "Environment   : " << tool_versions << "\n"
         << std::string(88, '=') << "\n\n";
 
-    // 1. Phân tích Hiệu ứng thác đổ (Avalanche Effect)
     log << "[PHẦN 1] ĐỐI CHIẾU GIÁ TRỊ BĂM THAM CHIẾU VÀ HIỆU ỨNG THÁC ĐỔ (18 MẪU S01–S18)\n"
         << std::string(88, '-') << "\n";
 
@@ -195,7 +193,6 @@ int run_all_experiments_cpp(
         << std::fixed << std::setprecision(2) << avg256 << "/256 bits (" << (avg256 / 256.0 * 100.0) << "%), "
         << "SHA3-256 = " << avg3 << "/256 bits (" << (avg3 / 256.0 * 100.0) << "%)\n\n";
 
-    // 2. Chạy ma trận TC01–TC09
     log << "[PHẦN 2] MA TRẬN TC01–TC09 — PROFILE CHÍNH SHA-256(file_bytes) (SHA3-256 xem dòng 4 Phần 3)\n"
         << std::string(88, '-') << "\n";
 

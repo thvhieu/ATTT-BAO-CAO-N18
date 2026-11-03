@@ -1,4 +1,3 @@
-"""Sinh biểu đồ từ CSV kết quả thật của phần Hash thuần và benchmark (không gõ cứng số liệu)."""
 from __future__ import annotations
 
 import argparse
@@ -41,7 +40,6 @@ def _annotate(ax, bars, color, bold=False):
 
 
 def plot_throughput(summary, out_path: Path) -> None:
-    """Hình 1: thông lượng trung vị theo kích thước, (a) chỉ băm trong RAM, (b) so với có mở/đọc tệp."""
     p256, p3 = _select(summary, False, "SHA-256"), _select(summary, False, "SHA3-256")
     i256, i3 = _select(summary, True, "SHA-256"), _select(summary, True, "SHA3-256")
     labels = [r["size_label"] for r in p256]
@@ -83,7 +81,6 @@ def plot_throughput(summary, out_path: Path) -> None:
 
 
 def plot_latency(summary, out_path: Path) -> None:
-    """Hình 2: (a) thời gian/lần băm log–log kèm thanh Q1–Q3, (b) tỷ số T(SHA3-256)/T(SHA-256)."""
     p256, p3 = _select(summary, False, "SHA-256"), _select(summary, False, "SHA3-256")
     sizes = [int(r["size_bytes"]) / 1024 for r in p256]
     labels = [r["size_label"] for r in p256]
@@ -142,7 +139,6 @@ STATUS_STYLE = [
 
 
 def plot_detection_and_avalanche(results_rows, avalanche_rows, out_path: Path) -> None:
-    """Hình 3: (a) đếm trạng thái thực tế theo TC đọc từ hash_verification_results.csv, (b) khoảng cách Hamming."""
     focus = ["TC01", "TC02", "TC03", "TC07", "TC09"]
     names = {"TC01": "Nguyên vẹn", "TC02": "Sửa 1 bit,\ngiữ hash gốc", "TC03": "Thay tệp\n+ hash kèm",
              "TC07": "Sửa metadata", "TC09": "Cắt 1 byte\ncuối"}
@@ -196,7 +192,6 @@ def plot_detection_and_avalanche(results_rows, avalanche_rows, out_path: Path) -
 
 
 def plot_sha_ni(ablation_rows, out_path: Path) -> None:
-    """Hình 4: thông lượng mặc định (bật SHA-NI) so với khi tắt SHA-NI (chạy phần mềm C++ thuần)."""
     labels = sorted({(int(r["size_bytes"]), r["size_label"]) for r in ablation_rows})
     x = np.arange(len(labels))
     fig, ax = plt.subplots(figsize=(11.5, 5.0))

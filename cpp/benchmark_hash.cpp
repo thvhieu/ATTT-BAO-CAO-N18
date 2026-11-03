@@ -1,4 +1,3 @@
-// Đo tốc độ (Benchmark) SHA-256 và SHA3-256 trên nhiều kích thước tệp — C++17 (Thành viên A).
 #include "hash_checker.hpp"
 #include "manifest_io.hpp"
 
@@ -353,7 +352,6 @@ int run_benchmarks_cpp(
         set_sha_ni_enabled(false);
         auto masked_rows = measure_cpp(data_root, run_id + "-SHA-NI-MASKED", repeats, warmup, include_extended, {false});
         set_sha_ni_enabled(true);
-        write_raw_csv(output_dir / "benchmark_sha_ni_masked_raw.csv", masked_rows);
         auto masked_sum = summarize_cpp(masked_rows);
 
         std::map<std::pair<std::size_t, std::string>, SummaryBenchRow> normal_map;
@@ -376,7 +374,6 @@ int run_benchmarks_cpp(
         write_ablation_csv(output_dir / "benchmark_sha_ni_ablation.csv", ablation_rows);
     }
 
-    // Ghi benchmark_environment.json
     {
         std::ofstream env_out(output_dir / "benchmark_environment.json", std::ios::binary);
         env_out << "{\n"
@@ -393,7 +390,6 @@ int run_benchmarks_cpp(
                 << "}\n";
     }
 
-    // Ghi benchmark.log
     std::ostringstream log;
     log << std::string(100, '=') << "\n"
         << "NHẬT KÝ ĐO TỐC ĐỘ SHA-256 VÀ SHA3-256 — C++17 (THÀNH VIÊN A)\n"

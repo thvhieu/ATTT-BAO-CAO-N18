@@ -1,8 +1,3 @@
-"""Biên dịch và chạy toàn bộ phần việc A bằng C++17, vẽ biểu đồ và gom minh chứng vào docs/evidence/hash/.
-
-    python tools/run_all_hash.py            # đầy đủ: 35 lần lặp, có kiểm chứng SHA-NI
-    python tools/run_all_hash.py --quick    # chạy nhanh để thử (5 lần lặp)
-"""
 from __future__ import annotations
 
 import argparse

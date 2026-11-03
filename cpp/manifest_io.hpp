@@ -1,5 +1,3 @@
-// Tiện ích xử lý Manifest và đọc bộ dữ liệu mẫu (data/manifest.json, data/test_cases.json) — C++17.
-// Phụ trách: Thành viên A — Hash thuần và đo tốc độ (Đề tài 18).
 #ifndef ATTT_N18_MANIFEST_IO_HPP
 #define ATTT_N18_MANIFEST_IO_HPP
 
@@ -153,7 +151,6 @@ inline std::vector<std::pair<std::string, std::string>> check_manifest(
     return out;
 }
 
-// Trích xuất giá trị chuỗi JSON đơn giản từ một khối đối tượng JSON chuẩn hóa của dự án.
 inline std::string json_get_string(const std::string& block, const std::string& key) {
     std::string pattern = "\"" + key + "\":";
     std::size_t pos = block.find(pattern);
@@ -221,21 +218,21 @@ inline std::vector<SampleRecord> load_dataset_samples(const std::filesystem::pat
             : samples_sec.substr(id_pos, next_id - id_pos);
 
         SampleRecord rec;
-        rec.sample_id              = json_get_string(blk, "sample_id");
-        rec.path                   = json_get_string(blk, "path");
-        rec.size_bytes             = json_get_uint(blk, "size_bytes");
-        rec.sha256                 = json_get_string(blk, "sha256");
-        rec.sha3_256               = json_get_string(blk, "sha3_256");
-        rec.metadata_path          = json_get_string(blk, "metadata_path");
-        rec.metadata_sha256        = json_get_string(blk, "metadata_sha256");
-        rec.tampered_path          = json_get_string(blk, "tampered_path");
-        rec.tampered_sha256        = json_get_string(blk, "tampered_sha256");
-        rec.tampered_metadata_path = json_get_string(blk, "tampered_metadata_path");
+        rec.sample_id                = json_get_string(blk, "sample_id");
+        rec.path                     = json_get_string(blk, "path");
+        rec.size_bytes               = json_get_uint(blk, "size_bytes");
+        rec.sha256                   = json_get_string(blk, "sha256");
+        rec.sha3_256                 = json_get_string(blk, "sha3_256");
+        rec.metadata_path            = json_get_string(blk, "metadata_path");
+        rec.metadata_sha256          = json_get_string(blk, "metadata_sha256");
+        rec.tampered_path            = json_get_string(blk, "tampered_path");
+        rec.tampered_sha256          = json_get_string(blk, "tampered_sha256");
+        rec.tampered_metadata_path   = json_get_string(blk, "tampered_metadata_path");
         rec.tampered_metadata_sha256 = json_get_string(blk, "tampered_metadata_sha256");
-        rec.reference_digest_path  = json_get_string(blk, "reference_digest_path");
-        rec.attacker_digest_path   = json_get_string(blk, "attacker_digest_path");
-        rec.mutation_op            = json_get_string(blk, "operation");
-        rec.mutation_offset        = json_get_uint(blk, "offset");
+        rec.reference_digest_path    = json_get_string(blk, "reference_digest_path");
+        rec.attacker_digest_path     = json_get_string(blk, "attacker_digest_path");
+        rec.mutation_op              = json_get_string(blk, "operation");
+        rec.mutation_offset          = json_get_uint(blk, "offset");
         samples.push_back(std::move(rec));
 
         if (next_id == std::string::npos) {
@@ -351,4 +348,3 @@ inline std::vector<TestCaseSpec> load_test_cases(const std::filesystem::path& da
 } // namespace hash_checker
 
 #endif // ATTT_N18_MANIFEST_IO_HPP
-

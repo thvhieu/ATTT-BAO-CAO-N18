@@ -1,4 +1,3 @@
-// Demo thực tế bằng C++17: sửa tệp, rồi sửa cả tệp lẫn manifest đi kèm (Thành viên A).
 #define ATTT_HASH_CLI_AS_LIBRARY
 #include "hash_cli.cpp"
 

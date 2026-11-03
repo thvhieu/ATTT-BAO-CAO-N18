@@ -1,9 +1,6 @@
-// Cài đặt chi tiết SHA-256 (FIPS 180-4, kèm SHA-NI intrinsics) và SHA3-256 (FIPS 202 Keccak-f[1600]) — C++17.
-// Phụ trách: Thành viên A — Hash thuần và đo tốc độ (Đề tài 18).
 #include "hash_checker.hpp"
 
 #include <algorithm>
-#include <array>
 #include <chrono>
 #include <cctype>
 #include <cstring>
@@ -54,9 +51,6 @@ std::string trim_ascii(const std::string& s) {
     return s.substr(start, end - start);
 }
 
-// ============================================================================
-// 1. CÀI ĐẶT SHA-256 (NIST FIPS PUB 180-4) — PHẦN MỀM THUẦN & PHẦN CỨNG SHA-NI
-// ============================================================================
 constexpr std::uint32_t SHA256_K[64] = {
     0x428a2f98UL, 0x71374491UL, 0xb5c0fbcfUL, 0xe9b5dba5UL,
     0x3956c25bUL, 0x59f111f1UL, 0x923f82a4UL, 0xab1c5ed5UL,
@@ -117,10 +111,10 @@ void sha256_transform_shani(std::uint32_t state[8], const std::uint8_t* data, st
 
     __m128i tmp = _mm_loadu_si128(reinterpret_cast<const __m128i*>(&state[0]));
     __m128i st1 = _mm_loadu_si128(reinterpret_cast<const __m128i*>(&state[4]));
-    tmp = _mm_shuffle_epi32(tmp, 0xB1); // CDAB
-    st1 = _mm_shuffle_epi32(st1, 0x1B); // EFGH
-    __m128i st0 = _mm_alignr_epi8(tmp, st1, 8); // ABEF
-    st1 = _mm_blend_epi16(st1, tmp, 0xF0);      // CDGH
+    tmp = _mm_shuffle_epi32(tmp, 0xB1);
+    st1 = _mm_shuffle_epi32(st1, 0x1B);
+    __m128i st0 = _mm_alignr_epi8(tmp, st1, 8);
+    st1 = _mm_blend_epi16(st1, tmp, 0xF0);
 
     for (std::size_t blk = 0; blk < num_blocks; ++blk, data += 64) {
         __m128i abef_save = st0;
@@ -209,10 +203,10 @@ void sha256_transform_shani(std::uint32_t state[8], const std::uint8_t* data, st
         st1 = _mm_add_epi32(st1, cdgh_save);
     }
 
-    tmp = _mm_shuffle_epi32(st0, 0x1B); // FEBA
-    st1 = _mm_shuffle_epi32(st1, 0xB1); // DCHG
-    _mm_storeu_si128(reinterpret_cast<__m128i*>(&state[0]), _mm_blend_epi16(tmp, st1, 0xF0)); // ABCD
-    _mm_storeu_si128(reinterpret_cast<__m128i*>(&state[4]), _mm_alignr_epi8(st1, tmp, 8));    // EFGH
+    tmp = _mm_shuffle_epi32(st0, 0x1B);
+    st1 = _mm_shuffle_epi32(st1, 0xB1);
+    _mm_storeu_si128(reinterpret_cast<__m128i*>(&state[0]), _mm_blend_epi16(tmp, st1, 0xF0));
+    _mm_storeu_si128(reinterpret_cast<__m128i*>(&state[4]), _mm_alignr_epi8(st1, tmp, 8));
 }
 #endif
 
@@ -298,9 +292,6 @@ private:
     bool use_shani_ = false;
 };
 
-// ============================================================================
-// 2. CÀI ĐẶT SHA3-256 (NIST FIPS PUB 202 — SPONGE KECCAK-f[1600], r=136B, c=64B)
-// ============================================================================
 constexpr std::uint64_t KECCAK_RC[24] = {
     0x0000000000000001ULL, 0x0000000000008082ULL, 0x800000000000808aULL, 0x8000000080008000ULL,
     0x000000000000808bULL, 0x0000000080000001ULL, 0x8000000080008081ULL, 0x8000000000008009ULL,
@@ -322,7 +313,6 @@ constexpr int KECCAK_PI[24] = {
 
 void keccak_f1600(std::uint64_t A[25]) noexcept {
     for (int round = 0; round < 24; ++round) {
-        // Bước Theta
         std::uint64_t C[5], D[5];
         #pragma GCC unroll 5
         for (int x = 0; x < 5; ++x) {
@@ -337,7 +327,6 @@ void keccak_f1600(std::uint64_t A[25]) noexcept {
             A[i] ^= D[i % 5];
         }
 
-        // Bước Rho & Pi
         std::uint64_t current = A[1];
         #pragma GCC unroll 24
         for (int i = 0; i < 24; ++i) {
@@ -347,7 +336,6 @@ void keccak_f1600(std::uint64_t A[25]) noexcept {
             current = tmp;
         }
 
-        // Bước Chi
         #pragma GCC unroll 5
         for (int y = 0; y < 25; y += 5) {
             std::uint64_t t0 = A[y + 0], t1 = A[y + 1], t2 = A[y + 2], t3 = A[y + 3], t4 = A[y + 4];
@@ -358,14 +346,13 @@ void keccak_f1600(std::uint64_t A[25]) noexcept {
             A[y + 4] = t4 ^ ((~t0) & t1);
         }
 
-        // Bước Iota
         A[0] ^= KECCAK_RC[round];
     }
 }
 
 class Sha3_256Hasher {
 public:
-    static constexpr std::size_t RATE_BYTES = 136; // r = 1088 bits = 136 bytes
+    static constexpr std::size_t RATE_BYTES = 136;
 
     Sha3_256Hasher() noexcept { reset(); }
 
@@ -401,8 +388,8 @@ public:
 
     std::string hexdigest() noexcept {
         std::memset(buf_ + buf_len_, 0, RATE_BYTES - buf_len_);
-        buf_[buf_len_] ^= 0x06U;        // Hậu tố phân tách miền SHA-3 (01) + bit đầu pad10*1
-        buf_[RATE_BYTES - 1] ^= 0x80U;  // Bit cuối của đa thức đệm pad10*1
+        buf_[buf_len_] ^= 0x06U;
+        buf_[RATE_BYTES - 1] ^= 0x80U;
         absorb_block(buf_);
 
         std::uint8_t out[32];
@@ -622,4 +609,3 @@ int hamming_distance_hex(const std::string& hex_a, const std::string& hex_b) {
 }
 
 } // namespace hash_checker
-

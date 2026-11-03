@@ -1,10 +1,8 @@
-// Bộ kiểm thử đơn vị (Unit Tests) cho mô-đun Hash thuần C++17 — Thành viên A.
 #define ATTT_DEMO_TAMPER_AS_LIBRARY
 #define ATTT_EXPERIMENTS_AS_LIBRARY
 #include "demo_tamper_hash.cpp"
 #include "run_hash_experiments.cpp"
 
-#include <cassert>
 #include <filesystem>
 #include <iostream>
 #include <stdexcept>
@@ -121,7 +119,7 @@ void test_07_tc09_truncation_detected() {
 void test_08_keyed_cases_not_applicable() {
     auto samples = load_dataset_samples("data");
     auto cases = load_test_cases("data");
-    for (int idx : {3, 4, 5, 7}) { // TC04, TC05, TC06, TC08
+    for (int idx : {3, 4, 5, 7}) {
         for (const auto& rec : samples) {
             auto ev = evaluate_hash_case_cpp(cases[idx], rec, "data", "SHA-256");
             REQUIRE(ev.actual_status == "NOT_APPLICABLE", "Keyed/AEAD case NOT_APPLICABLE");

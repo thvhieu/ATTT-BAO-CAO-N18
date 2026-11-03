@@ -1,9 +1,3 @@
-// Công cụ dòng lệnh kiểm tra tệp bằng hash thuần (SHA-256 / SHA3-256) — C++17 (Thành viên A).
-// Ví dụ:
-//   ./build/hash_cli digest data/samples/S03_ascii.txt --algo SHA-256
-//   ./build/hash_cli verify data/samples/S03_ascii.txt --digest-file data/digests/S03.sha256
-//   ./build/hash_cli manifest-create thu_muc -o thu_muc.manifest --algo SHA3-256
-//   ./build/hash_cli manifest-check thu_muc.manifest
 #include "hash_checker.hpp"
 #include "manifest_io.hpp"
 
@@ -166,4 +160,3 @@ int main(int argc, char* argv[]) {
     return run_cli_command(args, std::cout, std::cerr);
 }
 #endif
-
