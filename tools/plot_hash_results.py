@@ -196,15 +196,15 @@ def plot_detection_and_avalanche(results_rows, avalanche_rows, out_path: Path) -
 
 
 def plot_sha_ni(ablation_rows, out_path: Path) -> None:
-    """Hình 4: thông lượng mặc định so với khi che SHA-NI bằng OPENSSL_ia32cap."""
+    """Hình 4: thông lượng mặc định (bật SHA-NI) so với khi tắt SHA-NI (chạy phần mềm C++ thuần)."""
     labels = sorted({(int(r["size_bytes"]), r["size_label"]) for r in ablation_rows})
     x = np.arange(len(labels))
     fig, ax = plt.subplots(figsize=(11.5, 5.0))
     w = 0.2
-    styles = [("SHA-256", "default_median_mibs", C256, "SHA-256 mặc định"),
-              ("SHA-256", "sha_ni_masked_median_mibs", "#9ecae1", "SHA-256 che SHA-NI"),
+    styles = [("SHA-256", "default_median_mibs", C256, "SHA-256 mặc định (bật SHA-NI)"),
+              ("SHA-256", "sha_ni_masked_median_mibs", "#9ecae1", "SHA-256 tắt SHA-NI (phần mềm thuần)"),
               ("SHA3-256", "default_median_mibs", C3, "SHA3-256 mặc định"),
-              ("SHA3-256", "sha_ni_masked_median_mibs", "#fdd0a2", "SHA3-256 che SHA-NI")]
+              ("SHA3-256", "sha_ni_masked_median_mibs", "#fdd0a2", "SHA3-256 khi tắt SHA-NI")]
     max_val = 0.0
     for k, (alg, col, color, lab) in enumerate(styles):
         idx = {int(r["size_bytes"]): float(r[col]) for r in ablation_rows if r["algorithm"] == alg}
@@ -213,13 +213,13 @@ def plot_sha_ni(ablation_rows, out_path: Path) -> None:
         bars = ax.bar(x + (k - 1.5) * w, vals, w, color=color, label=lab)
         for b in bars:
             h = b.get_height()
-            ax.text(b.get_x() + b.get_width() / 2, h + 18, f"{h:.0f}",
+            ax.text(b.get_x() + b.get_width() / 2, h + max_val * 0.012, f"{h:.0f}",
                     ha="center", va="bottom", fontsize=7.5, color="#1f2937")
-    ax.set_ylim(0, max_val * 1.22)
+    ax.set_ylim(0, max_val * 1.24)
     ax.set_xticks(x, [l for _, l in labels])
     ax.set_ylabel("Thông lượng trung vị (MiB/s)")
     ax.set_xlabel("Kích thước tệp (chỉ băm trong RAM)")
-    ax.set_title('Kiểm chứng vai trò SHA-NI: OPENSSL_ia32cap=":~0x20000000"', fontsize=12, fontweight="bold")
+    ax.set_title("Kiểm chứng vai trò tập lệnh phần cứng SHA-NI đối với thông lượng SHA-256 và SHA3-256", fontsize=12, fontweight="bold")
     ax.grid(axis="y", linestyle="--", alpha=0.45)
     ax.legend(loc="upper left", fontsize=9, ncol=2)
     fig.tight_layout()

@@ -1,8 +1,8 @@
 ========================================================================================
-NHẬT KÝ THỰC NGHIỆM KIỂM TRA TOÀN VẸN TỆP BẰNG HÀM BĂM THUẦN (THÀNH VIÊN A)
-Run ID        : HASH-N18-RUN01
+NHẬT KÝ THỰC NGHIỆM KIỂM TRA TOÀN VẸN TỆP BẰNG HÀM BĂM THUẦN — C++17 (THÀNH VIÊN A)
+Run ID        : HASH-N18-CPP01
 Dataset Ver   : 1.0.0 (seed: ATTT-N18-shared-data-v1)
-Environment   : Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
+Environment   : C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64
 ========================================================================================
 
 [PHẦN 1] ĐỐI CHIẾU GIÁ TRỊ BĂM THAM CHIẾU VÀ HIỆU ỨNG THÁC ĐỔ (18 MẪU S01–S18)
@@ -30,15 +30,15 @@ Environment   : Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.2620
 
 [PHẦN 2] MA TRẬN TC01–TC09 — PROFILE CHÍNH SHA-256(file_bytes) (SHA3-256 xem dòng 4 Phần 3)
 ----------------------------------------------------------------------------------------
-  TC01 (Nguyên vẹn                            ): status=[ACCEPT:18                          ] | expectation_match=18/18 | detection=N/A
-  TC02 (Sửa nội dung giữ bằng chứng cũ        ): status=[REJECT:18                          ] | expectation_match=18/18 | detection=18/18 (100.0%)
-  TC03 (Thay cả tệp và SHA-256 được gửi kèm   ): status=[ACCEPT_UNTRUSTED:18                ] | expectation_match=18/18 | detection=0/18 (0.0%)
-  TC04 (Khóa sai                              ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
-  TC05 (Thẻ HMAC bị sửa                       ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
-  TC06 (Thẻ AEAD bị sửa                       ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
-  TC07 (Metadata bị sửa                       ): status=[ACCEPT_METADATA_OUTSIDE_SCOPE:18   ] | expectation_match=18/18 | detection=N/A
+  TC01 (Nguyên vẹn                         ): status=[ACCEPT:18                          ] | expectation_match=18/18 | detection=N/A
+  TC02 (Sửa nội dung giữ bằng chứng cũ): status=[REJECT:18                          ] | expectation_match=18/18 | detection=18/18 (100.0%)
+  TC03 (Thay cả tệp và SHA-256 được gửi kèm): status=[ACCEPT_UNTRUSTED:18                ] | expectation_match=18/18 | detection=0/18 (0.0%)
+  TC04 (Khóa sai                             ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
+  TC05 (Thẻ HMAC bị sửa                 ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
+  TC06 (Thẻ AEAD bị sửa                 ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
+  TC07 (Metadata bị sửa                   ): status=[ACCEPT_METADATA_OUTSIDE_SCOPE:18   ] | expectation_match=18/18 | detection=N/A
   TC08 (Nonce AEAD sai                        ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
-  TC09 (Cắt ngắn nội dung                     ): status=[NOT_APPLICABLE:1, REJECT:17        ] | expectation_match=18/18 | detection=17/17 (100.0%)
+  TC09 (Cắt ngắn nội dung               ): status=[NOT_APPLICABLE:1, REJECT:17        ] | expectation_match=18/18 | detection=17/17 (100.0%)
 ----------------------------------------------------------------------------------------
 [PHẦN 3] TỔNG HỢP TỶ LỆ PHÁT HIỆN THEO QUY ƯỚC ĐỀ TÀI (data/README.md)
   1. Tập sửa nội dung có bằng chứng tham chiếu tin cậy (TC02 + TC09): 35/35 (100.00%)

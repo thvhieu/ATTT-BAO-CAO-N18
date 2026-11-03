@@ -1,163 +1,163 @@
 run_id,case_id,sample_id,mechanism,expected_status,actual_status,applicable_to_detection,detected,elapsed_ns,evidence_path,tool_versions
-HASH-N18-RUN01,TC01,S01,SHA-256,ACCEPT,ACCEPT,False,False,16100,samples/S01_empty.bin|digests/S01.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S02,SHA-256,ACCEPT,ACCEPT,False,False,6100,samples/S02_one_byte.bin|digests/S02.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S03,SHA-256,ACCEPT,ACCEPT,False,False,5700,samples/S03_ascii.txt|digests/S03.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S04,SHA-256,ACCEPT,ACCEPT,False,False,5600,samples/S04_vietnamese_utf8.txt|digests/S04.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S05,SHA-256,ACCEPT,ACCEPT,False,False,5700,samples/S05_unicode_symbols.txt|digests/S05.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S06,SHA-256,ACCEPT,ACCEPT,False,False,5500,samples/S06_lines_lf.txt|digests/S06.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S07,SHA-256,ACCEPT,ACCEPT,False,False,5700,samples/S07_lines_crlf.txt|digests/S07.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S08,SHA-256,ACCEPT,ACCEPT,False,False,6800,samples/S08_order_synthetic.json|digests/S08.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S09,SHA-256,ACCEPT,ACCEPT,False,False,5700,samples/S09_students_synthetic.csv|digests/S09.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S10,SHA-256,ACCEPT,ACCEPT,False,False,6200,samples/S10_all_byte_values.bin|digests/S10.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S11,SHA-256,ACCEPT,ACCEPT,False,False,5800,samples/S11_zero_1k.bin|digests/S11.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S12,SHA-256,ACCEPT,ACCEPT,False,False,6400,samples/S12_repeated_1k.bin|digests/S12.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S13,SHA-256,ACCEPT,ACCEPT,False,False,5900,samples/S13_deterministic_1k.bin|digests/S13.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S14,SHA-256,ACCEPT,ACCEPT,False,False,5900,samples/S14_boundary_15.bin|digests/S14.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S15,SHA-256,ACCEPT,ACCEPT,False,False,5500,samples/S15_boundary_16.bin|digests/S15.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S16,SHA-256,ACCEPT,ACCEPT,False,False,7900,samples/S16_boundary_17.bin|digests/S16.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S17,SHA-256,ACCEPT,ACCEPT,False,False,6200,samples/S17_unicode_nfc.txt|digests/S17.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC01,S18,SHA-256,ACCEPT,ACCEPT,False,False,5600,samples/S18_unicode_nfd.txt|digests/S18.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S01,SHA-256,REJECT,REJECT,True,True,5800,tampered/S01_empty.bin|digests/S01.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S02,SHA-256,REJECT,REJECT,True,True,5500,tampered/S02_one_byte.bin|digests/S02.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S03,SHA-256,REJECT,REJECT,True,True,5700,tampered/S03_ascii.txt|digests/S03.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S04,SHA-256,REJECT,REJECT,True,True,10000,tampered/S04_vietnamese_utf8.txt|digests/S04.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S05,SHA-256,REJECT,REJECT,True,True,5500,tampered/S05_unicode_symbols.txt|digests/S05.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S06,SHA-256,REJECT,REJECT,True,True,5900,tampered/S06_lines_lf.txt|digests/S06.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S07,SHA-256,REJECT,REJECT,True,True,8400,tampered/S07_lines_crlf.txt|digests/S07.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S08,SHA-256,REJECT,REJECT,True,True,6100,tampered/S08_order_synthetic.json|digests/S08.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S09,SHA-256,REJECT,REJECT,True,True,5300,tampered/S09_students_synthetic.csv|digests/S09.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S10,SHA-256,REJECT,REJECT,True,True,5900,tampered/S10_all_byte_values.bin|digests/S10.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S11,SHA-256,REJECT,REJECT,True,True,5900,tampered/S11_zero_1k.bin|digests/S11.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S12,SHA-256,REJECT,REJECT,True,True,6100,tampered/S12_repeated_1k.bin|digests/S12.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S13,SHA-256,REJECT,REJECT,True,True,5800,tampered/S13_deterministic_1k.bin|digests/S13.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S14,SHA-256,REJECT,REJECT,True,True,5200,tampered/S14_boundary_15.bin|digests/S14.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S15,SHA-256,REJECT,REJECT,True,True,5400,tampered/S15_boundary_16.bin|digests/S15.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S16,SHA-256,REJECT,REJECT,True,True,5300,tampered/S16_boundary_17.bin|digests/S16.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S17,SHA-256,REJECT,REJECT,True,True,5600,tampered/S17_unicode_nfc.txt|digests/S17.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC02,S18,SHA-256,REJECT,REJECT,True,True,5300,tampered/S18_unicode_nfd.txt|digests/S18.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S01,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,6400,tampered/S01_empty.bin|digests/S01.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S02,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5900,tampered/S02_one_byte.bin|digests/S02.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S03,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5500,tampered/S03_ascii.txt|digests/S03.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S04,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5600,tampered/S04_vietnamese_utf8.txt|digests/S04.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S05,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5300,tampered/S05_unicode_symbols.txt|digests/S05.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S06,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5200,tampered/S06_lines_lf.txt|digests/S06.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S07,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5200,tampered/S07_lines_crlf.txt|digests/S07.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S08,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5600,tampered/S08_order_synthetic.json|digests/S08.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S09,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,6700,tampered/S09_students_synthetic.csv|digests/S09.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S10,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,6500,tampered/S10_all_byte_values.bin|digests/S10.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S11,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5900,tampered/S11_zero_1k.bin|digests/S11.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S12,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,6200,tampered/S12_repeated_1k.bin|digests/S12.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S13,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,6000,tampered/S13_deterministic_1k.bin|digests/S13.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S14,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5700,tampered/S14_boundary_15.bin|digests/S14.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S15,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,7700,tampered/S15_boundary_16.bin|digests/S15.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S16,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5700,tampered/S16_boundary_17.bin|digests/S16.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S17,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5500,tampered/S17_unicode_nfc.txt|digests/S17.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC03,S18,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,5500,tampered/S18_unicode_nfd.txt|digests/S18.tampered.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S02,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S02_one_byte.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S03,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S03_ascii.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S04,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S04_vietnamese_utf8.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S05,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S05_unicode_symbols.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S06,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S06_lines_lf.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S07,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S07_lines_crlf.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S08,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S08_order_synthetic.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S09,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S09_students_synthetic.csv,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S10,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S10_all_byte_values.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S11,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S11_zero_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S12,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S12_repeated_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S13,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S13_deterministic_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S14,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S14_boundary_15.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S15,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S15_boundary_16.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S16,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S16_boundary_17.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S17,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S17_unicode_nfc.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC04,S18,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S18_unicode_nfd.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S02,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S02_one_byte.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S03,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S03_ascii.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S04,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S04_vietnamese_utf8.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S05,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S05_unicode_symbols.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S06,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S06_lines_lf.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S07,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S07_lines_crlf.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S08,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S08_order_synthetic.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S09,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S09_students_synthetic.csv,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S10,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S10_all_byte_values.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S11,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S11_zero_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S12,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S12_repeated_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S13,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S13_deterministic_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S14,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S14_boundary_15.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S15,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S15_boundary_16.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S16,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S16_boundary_17.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S17,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S17_unicode_nfc.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC05,S18,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S18_unicode_nfd.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S02,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S02_one_byte.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S03,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S03_ascii.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S04,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S04_vietnamese_utf8.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S05,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S05_unicode_symbols.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S06,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S06_lines_lf.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S07,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S07_lines_crlf.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S08,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S08_order_synthetic.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S09,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S09_students_synthetic.csv,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S10,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S10_all_byte_values.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S11,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S11_zero_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S12,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S12_repeated_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S13,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S13_deterministic_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S14,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S14_boundary_15.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S15,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S15_boundary_16.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S16,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S16_boundary_17.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S17,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S17_unicode_nfc.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC06,S18,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S18_unicode_nfd.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S01,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,12000,samples/S01_empty.bin|metadata/S01.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S02,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5700,samples/S02_one_byte.bin|metadata/S02.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S03,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5700,samples/S03_ascii.txt|metadata/S03.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S04,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5700,samples/S04_vietnamese_utf8.txt|metadata/S04.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S05,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,8700,samples/S05_unicode_symbols.txt|metadata/S05.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S06,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,7800,samples/S06_lines_lf.txt|metadata/S06.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S07,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,6400,samples/S07_lines_crlf.txt|metadata/S07.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S08,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,6000,samples/S08_order_synthetic.json|metadata/S08.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S09,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5500,samples/S09_students_synthetic.csv|metadata/S09.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S10,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,6600,samples/S10_all_byte_values.bin|metadata/S10.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S11,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5900,samples/S11_zero_1k.bin|metadata/S11.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S12,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5800,samples/S12_repeated_1k.bin|metadata/S12.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S13,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5700,samples/S13_deterministic_1k.bin|metadata/S13.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S14,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5400,samples/S14_boundary_15.bin|metadata/S14.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S15,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5200,samples/S15_boundary_16.bin|metadata/S15.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S16,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,7100,samples/S16_boundary_17.bin|metadata/S16.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S17,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,6100,samples/S17_unicode_nfc.txt|metadata/S17.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC07,S18,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5300,samples/S18_unicode_nfd.txt|metadata/S18.tampered.aad.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S02,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S02_one_byte.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S03,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S03_ascii.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S04,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S04_vietnamese_utf8.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S05,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S05_unicode_symbols.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S06,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S06_lines_lf.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S07,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S07_lines_crlf.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S08,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S08_order_synthetic.json,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S09,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S09_students_synthetic.csv,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S10,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S10_all_byte_values.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S11,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S11_zero_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S12,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S12_repeated_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S13,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S13_deterministic_1k.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S14,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S14_boundary_15.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S15,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S15_boundary_16.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S16,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S16_boundary_17.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S17,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S17_unicode_nfc.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC08,S18,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S18_unicode_nfd.txt,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S02,SHA-256,REJECT,REJECT,True,True,11200,samples/S02_one_byte.bin[:-1]|digests/S02.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S03,SHA-256,REJECT,REJECT,True,True,6200,samples/S03_ascii.txt[:-1]|digests/S03.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S04,SHA-256,REJECT,REJECT,True,True,6200,samples/S04_vietnamese_utf8.txt[:-1]|digests/S04.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S05,SHA-256,REJECT,REJECT,True,True,6000,samples/S05_unicode_symbols.txt[:-1]|digests/S05.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S06,SHA-256,REJECT,REJECT,True,True,5900,samples/S06_lines_lf.txt[:-1]|digests/S06.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S07,SHA-256,REJECT,REJECT,True,True,5600,samples/S07_lines_crlf.txt[:-1]|digests/S07.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S08,SHA-256,REJECT,REJECT,True,True,6900,samples/S08_order_synthetic.json[:-1]|digests/S08.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S09,SHA-256,REJECT,REJECT,True,True,6300,samples/S09_students_synthetic.csv[:-1]|digests/S09.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S10,SHA-256,REJECT,REJECT,True,True,6800,samples/S10_all_byte_values.bin[:-1]|digests/S10.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S11,SHA-256,REJECT,REJECT,True,True,6700,samples/S11_zero_1k.bin[:-1]|digests/S11.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S12,SHA-256,REJECT,REJECT,True,True,10100,samples/S12_repeated_1k.bin[:-1]|digests/S12.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S13,SHA-256,REJECT,REJECT,True,True,6900,samples/S13_deterministic_1k.bin[:-1]|digests/S13.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S14,SHA-256,REJECT,REJECT,True,True,6200,samples/S14_boundary_15.bin[:-1]|digests/S14.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S15,SHA-256,REJECT,REJECT,True,True,5800,samples/S15_boundary_16.bin[:-1]|digests/S15.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S16,SHA-256,REJECT,REJECT,True,True,5700,samples/S16_boundary_17.bin[:-1]|digests/S16.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S17,SHA-256,REJECT,REJECT,True,True,6100,samples/S17_unicode_nfc.txt[:-1]|digests/S17.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
-HASH-N18-RUN01,TC09,S18,SHA-256,REJECT,REJECT,True,True,5800,samples/S18_unicode_nfd.txt[:-1]|digests/S18.sha256,Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
+HASH-N18-CPP01,TC01,S01,SHA-256,ACCEPT,ACCEPT,False,False,4100,samples/S01_empty.bin|digests/S01.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S02,SHA-256,ACCEPT,ACCEPT,False,False,19900,samples/S02_one_byte.bin|digests/S02.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S03,SHA-256,ACCEPT,ACCEPT,False,False,2700,samples/S03_ascii.txt|digests/S03.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S04,SHA-256,ACCEPT,ACCEPT,False,False,2100,samples/S04_vietnamese_utf8.txt|digests/S04.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S05,SHA-256,ACCEPT,ACCEPT,False,False,2200,samples/S05_unicode_symbols.txt|digests/S05.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S06,SHA-256,ACCEPT,ACCEPT,False,False,3600,samples/S06_lines_lf.txt|digests/S06.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S07,SHA-256,ACCEPT,ACCEPT,False,False,2800,samples/S07_lines_crlf.txt|digests/S07.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S08,SHA-256,ACCEPT,ACCEPT,False,False,3400,samples/S08_order_synthetic.json|digests/S08.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S09,SHA-256,ACCEPT,ACCEPT,False,False,3100,samples/S09_students_synthetic.csv|digests/S09.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S10,SHA-256,ACCEPT,ACCEPT,False,False,4100,samples/S10_all_byte_values.bin|digests/S10.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S11,SHA-256,ACCEPT,ACCEPT,False,False,3100,samples/S11_zero_1k.bin|digests/S11.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S12,SHA-256,ACCEPT,ACCEPT,False,False,2500,samples/S12_repeated_1k.bin|digests/S12.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S13,SHA-256,ACCEPT,ACCEPT,False,False,2800,samples/S13_deterministic_1k.bin|digests/S13.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S14,SHA-256,ACCEPT,ACCEPT,False,False,1900,samples/S14_boundary_15.bin|digests/S14.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S15,SHA-256,ACCEPT,ACCEPT,False,False,2000,samples/S15_boundary_16.bin|digests/S15.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S16,SHA-256,ACCEPT,ACCEPT,False,False,2200,samples/S16_boundary_17.bin|digests/S16.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S17,SHA-256,ACCEPT,ACCEPT,False,False,4200,samples/S17_unicode_nfc.txt|digests/S17.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC01,S18,SHA-256,ACCEPT,ACCEPT,False,False,2900,samples/S18_unicode_nfd.txt|digests/S18.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S01,SHA-256,REJECT,REJECT,True,True,4500,tampered/S01_empty.bin|digests/S01.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S02,SHA-256,REJECT,REJECT,True,True,3100,tampered/S02_one_byte.bin|digests/S02.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S03,SHA-256,REJECT,REJECT,True,True,2500,tampered/S03_ascii.txt|digests/S03.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S04,SHA-256,REJECT,REJECT,True,True,2500,tampered/S04_vietnamese_utf8.txt|digests/S04.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S05,SHA-256,REJECT,REJECT,True,True,2300,tampered/S05_unicode_symbols.txt|digests/S05.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S06,SHA-256,REJECT,REJECT,True,True,2100,tampered/S06_lines_lf.txt|digests/S06.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S07,SHA-256,REJECT,REJECT,True,True,3300,tampered/S07_lines_crlf.txt|digests/S07.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S08,SHA-256,REJECT,REJECT,True,True,3500,tampered/S08_order_synthetic.json|digests/S08.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S09,SHA-256,REJECT,REJECT,True,True,2500,tampered/S09_students_synthetic.csv|digests/S09.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S10,SHA-256,REJECT,REJECT,True,True,3300,tampered/S10_all_byte_values.bin|digests/S10.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S11,SHA-256,REJECT,REJECT,True,True,4300,tampered/S11_zero_1k.bin|digests/S11.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S12,SHA-256,REJECT,REJECT,True,True,3400,tampered/S12_repeated_1k.bin|digests/S12.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S13,SHA-256,REJECT,REJECT,True,True,4300,tampered/S13_deterministic_1k.bin|digests/S13.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S14,SHA-256,REJECT,REJECT,True,True,3800,tampered/S14_boundary_15.bin|digests/S14.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S15,SHA-256,REJECT,REJECT,True,True,2800,tampered/S15_boundary_16.bin|digests/S15.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S16,SHA-256,REJECT,REJECT,True,True,3200,tampered/S16_boundary_17.bin|digests/S16.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S17,SHA-256,REJECT,REJECT,True,True,3200,tampered/S17_unicode_nfc.txt|digests/S17.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC02,S18,SHA-256,REJECT,REJECT,True,True,5100,tampered/S18_unicode_nfd.txt|digests/S18.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S01,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3300,tampered/S01_empty.bin|digests/S01.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S02,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,2600,tampered/S02_one_byte.bin|digests/S02.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S03,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3600,tampered/S03_ascii.txt|digests/S03.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S04,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3500,tampered/S04_vietnamese_utf8.txt|digests/S04.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S05,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,2500,tampered/S05_unicode_symbols.txt|digests/S05.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S06,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,2900,tampered/S06_lines_lf.txt|digests/S06.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S07,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,4000,tampered/S07_lines_crlf.txt|digests/S07.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S08,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,2800,tampered/S08_order_synthetic.json|digests/S08.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S09,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3500,tampered/S09_students_synthetic.csv|digests/S09.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S10,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3400,tampered/S10_all_byte_values.bin|digests/S10.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S11,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,4600,tampered/S11_zero_1k.bin|digests/S11.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S12,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3800,tampered/S12_repeated_1k.bin|digests/S12.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S13,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3900,tampered/S13_deterministic_1k.bin|digests/S13.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S14,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3000,tampered/S14_boundary_15.bin|digests/S14.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S15,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3100,tampered/S15_boundary_16.bin|digests/S15.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S16,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,3100,tampered/S16_boundary_17.bin|digests/S16.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S17,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,2600,tampered/S17_unicode_nfc.txt|digests/S17.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC03,S18,SHA-256,ACCEPT_UNTRUSTED,ACCEPT_UNTRUSTED,True,False,2600,tampered/S18_unicode_nfd.txt|digests/S18.tampered.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S02,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S02_one_byte.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S03,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S03_ascii.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S04,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S04_vietnamese_utf8.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S05,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S05_unicode_symbols.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S06,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S06_lines_lf.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S07,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S07_lines_crlf.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S08,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S08_order_synthetic.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S09,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S09_students_synthetic.csv,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S10,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S10_all_byte_values.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S11,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S11_zero_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S12,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S12_repeated_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S13,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S13_deterministic_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S14,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S14_boundary_15.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S15,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S15_boundary_16.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S16,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S16_boundary_17.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S17,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S17_unicode_nfc.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC04,S18,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S18_unicode_nfd.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S02,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S02_one_byte.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S03,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S03_ascii.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S04,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S04_vietnamese_utf8.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S05,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S05_unicode_symbols.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S06,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S06_lines_lf.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S07,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S07_lines_crlf.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S08,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S08_order_synthetic.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S09,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S09_students_synthetic.csv,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S10,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S10_all_byte_values.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S11,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S11_zero_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S12,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S12_repeated_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S13,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S13_deterministic_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S14,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S14_boundary_15.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S15,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S15_boundary_16.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S16,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S16_boundary_17.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S17,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S17_unicode_nfc.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC05,S18,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S18_unicode_nfd.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S02,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S02_one_byte.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S03,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S03_ascii.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S04,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S04_vietnamese_utf8.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S05,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S05_unicode_symbols.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S06,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S06_lines_lf.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S07,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S07_lines_crlf.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S08,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S08_order_synthetic.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S09,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S09_students_synthetic.csv,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S10,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S10_all_byte_values.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S11,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S11_zero_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S12,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S12_repeated_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S13,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S13_deterministic_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S14,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S14_boundary_15.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S15,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S15_boundary_16.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S16,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S16_boundary_17.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S17,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S17_unicode_nfc.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC06,S18,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S18_unicode_nfd.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S01,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2700,samples/S01_empty.bin|metadata/S01.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S02,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2500,samples/S02_one_byte.bin|metadata/S02.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S03,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2100,samples/S03_ascii.txt|metadata/S03.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S04,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2200,samples/S04_vietnamese_utf8.txt|metadata/S04.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S05,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2000,samples/S05_unicode_symbols.txt|metadata/S05.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S06,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2100,samples/S06_lines_lf.txt|metadata/S06.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S07,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2500,samples/S07_lines_crlf.txt|metadata/S07.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S08,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,3200,samples/S08_order_synthetic.json|metadata/S08.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S09,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2000,samples/S09_students_synthetic.csv|metadata/S09.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S10,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,3700,samples/S10_all_byte_values.bin|metadata/S10.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S11,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,3100,samples/S11_zero_1k.bin|metadata/S11.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S12,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,3400,samples/S12_repeated_1k.bin|metadata/S12.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S13,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,4200,samples/S13_deterministic_1k.bin|metadata/S13.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S14,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2600,samples/S14_boundary_15.bin|metadata/S14.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S15,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,2300,samples/S15_boundary_16.bin|metadata/S15.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S16,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,4500,samples/S16_boundary_17.bin|metadata/S16.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S17,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,5900,samples/S17_unicode_nfc.txt|metadata/S17.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC07,S18,SHA-256,ACCEPT_METADATA_OUTSIDE_SCOPE,ACCEPT_METADATA_OUTSIDE_SCOPE,False,False,3700,samples/S18_unicode_nfd.txt|metadata/S18.tampered.aad.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S02,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S02_one_byte.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S03,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S03_ascii.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S04,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S04_vietnamese_utf8.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S05,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S05_unicode_symbols.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S06,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S06_lines_lf.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S07,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S07_lines_crlf.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S08,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S08_order_synthetic.json,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S09,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S09_students_synthetic.csv,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S10,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S10_all_byte_values.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S11,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S11_zero_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S12,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S12_repeated_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S13,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S13_deterministic_1k.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S14,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S14_boundary_15.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S15,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S15_boundary_16.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S16,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S16_boundary_17.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S17,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S17_unicode_nfc.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC08,S18,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S18_unicode_nfd.txt,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S01,SHA-256,NOT_APPLICABLE,NOT_APPLICABLE,False,False,0,samples/S01_empty.bin,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S02,SHA-256,REJECT,REJECT,True,True,3400,samples/S02_one_byte.bin[:-1]|digests/S02.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S03,SHA-256,REJECT,REJECT,True,True,2400,samples/S03_ascii.txt[:-1]|digests/S03.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S04,SHA-256,REJECT,REJECT,True,True,2400,samples/S04_vietnamese_utf8.txt[:-1]|digests/S04.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S05,SHA-256,REJECT,REJECT,True,True,2400,samples/S05_unicode_symbols.txt[:-1]|digests/S05.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S06,SHA-256,REJECT,REJECT,True,True,2500,samples/S06_lines_lf.txt[:-1]|digests/S06.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S07,SHA-256,REJECT,REJECT,True,True,2200,samples/S07_lines_crlf.txt[:-1]|digests/S07.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S08,SHA-256,REJECT,REJECT,True,True,2400,samples/S08_order_synthetic.json[:-1]|digests/S08.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S09,SHA-256,REJECT,REJECT,True,True,3500,samples/S09_students_synthetic.csv[:-1]|digests/S09.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S10,SHA-256,REJECT,REJECT,True,True,3200,samples/S10_all_byte_values.bin[:-1]|digests/S10.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S11,SHA-256,REJECT,REJECT,True,True,2800,samples/S11_zero_1k.bin[:-1]|digests/S11.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S12,SHA-256,REJECT,REJECT,True,True,3300,samples/S12_repeated_1k.bin[:-1]|digests/S12.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S13,SHA-256,REJECT,REJECT,True,True,2700,samples/S13_deterministic_1k.bin[:-1]|digests/S13.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S14,SHA-256,REJECT,REJECT,True,True,4200,samples/S14_boundary_15.bin[:-1]|digests/S14.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S15,SHA-256,REJECT,REJECT,True,True,5300,samples/S15_boundary_16.bin[:-1]|digests/S15.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S16,SHA-256,REJECT,REJECT,True,True,2800,samples/S16_boundary_17.bin[:-1]|digests/S16.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S17,SHA-256,REJECT,REJECT,True,True,3900,samples/S17_unicode_nfc.txt[:-1]|digests/S17.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"
+HASH-N18-CPP01,TC09,S18,SHA-256,REJECT,REJECT,True,True,2300,samples/S18_unicode_nfd.txt[:-1]|digests/S18.sha256,"C++17 (GCC 15.2.0); SHA-NI=supported; Windows-x86_64"

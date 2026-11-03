@@ -1,10 +1,10 @@
 case_id,name,operation,is_control,expected_hash_status,samples_evaluated,matched_expectation,applicable_to_detection,detected_count,detection_rate_pct,status_breakdown
-TC01,Nguyên vẹn,none,True,ACCEPT,18,18/18,0,0,,ACCEPT:18
-TC02,Sửa nội dung giữ bằng chứng cũ,flip_payload_bit,False,REJECT,18,18/18,18,18,100.0,REJECT:18
-TC03,Thay cả tệp và SHA-256 được gửi kèm,replace_payload_and_hash,False,ACCEPT_UNTRUSTED,18,18/18,18,0,0.0,ACCEPT_UNTRUSTED:18
-TC04,Khóa sai,wrong_key,False,NOT_APPLICABLE,18,18/18,0,0,,NOT_APPLICABLE:18
-TC05,Thẻ HMAC bị sửa,flip_hmac_tag_bit,False,NOT_APPLICABLE,18,18/18,0,0,,NOT_APPLICABLE:18
-TC06,Thẻ AEAD bị sửa,flip_aead_tag_bit,False,NOT_APPLICABLE,18,18/18,0,0,,NOT_APPLICABLE:18
-TC07,Metadata bị sửa,replace_aad,False,ACCEPT_METADATA_OUTSIDE_SCOPE,18,18/18,0,0,,ACCEPT_METADATA_OUTSIDE_SCOPE:18
-TC08,Nonce AEAD sai,wrong_nonce,False,NOT_APPLICABLE,18,18/18,0,0,,NOT_APPLICABLE:18
-TC09,Cắt ngắn nội dung,truncate_one_byte,False,REJECT,18,18/18,17,17,100.0,"NOT_APPLICABLE:1, REJECT:17"
+TC01,"Nguyên vẹn",none,True,ACCEPT,18,18/18,0,0,,"ACCEPT:18"
+TC02,"Sửa nội dung giữ bằng chứng cũ",flip_payload_bit,False,REJECT,18,18/18,18,18,100.00,"REJECT:18"
+TC03,"Thay cả tệp và SHA-256 được gửi kèm",replace_payload_and_hash,False,ACCEPT_UNTRUSTED,18,18/18,18,0,0.00,"ACCEPT_UNTRUSTED:18"
+TC04,"Khóa sai",wrong_key,False,NOT_APPLICABLE,18,18/18,0,0,,"NOT_APPLICABLE:18"
+TC05,"Thẻ HMAC bị sửa",flip_hmac_tag_bit,False,NOT_APPLICABLE,18,18/18,0,0,,"NOT_APPLICABLE:18"
+TC06,"Thẻ AEAD bị sửa",flip_aead_tag_bit,False,NOT_APPLICABLE,18,18/18,0,0,,"NOT_APPLICABLE:18"
+TC07,"Metadata bị sửa",replace_aad,False,ACCEPT_METADATA_OUTSIDE_SCOPE,18,18/18,0,0,,"ACCEPT_METADATA_OUTSIDE_SCOPE:18"
+TC08,"Nonce AEAD sai",wrong_nonce,False,NOT_APPLICABLE,18,18/18,0,0,,"NOT_APPLICABLE:18"
+TC09,"Cắt ngắn nội dung",truncate_one_byte,False,REJECT,18,18/18,17,17,100.00,"NOT_APPLICABLE:1, REJECT:17"
