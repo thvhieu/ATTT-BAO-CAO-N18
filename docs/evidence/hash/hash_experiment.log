@@ -1,0 +1,48 @@
+========================================================================================
+NHẬT KÝ THỰC NGHIỆM KIỂM TRA TOÀN VẸN TỆP BẰNG HÀM BĂM THUẦN (THÀNH VIÊN A)
+Run ID        : HASH-N18-RUN01
+Dataset Ver   : 1.0.0 (seed: ATTT-N18-shared-data-v1)
+Environment   : Python 3.12.10; OpenSSL 3.0.16 11 Feb 2025; Windows-11-10.0.26200-SP0
+========================================================================================
+
+[PHẦN 1] ĐỐI CHIẾU GIÁ TRỊ BĂM THAM CHIẾU VÀ HIỆU ỨNG THÁC ĐỔ (18 MẪU S01–S18)
+----------------------------------------------------------------------------------------
+  S01 (   0 B | append_to_empty): SHA-256 HD = 139/256 bits ( 54.3%), SHA3-256 HD = 131/256 bits ( 51.2%)
+  S02 (   1 B | flip_one_bit   ): SHA-256 HD = 139/256 bits ( 54.3%), SHA3-256 HD = 132/256 bits ( 51.6%)
+  S03 (  28 B | flip_one_bit   ): SHA-256 HD = 128/256 bits ( 50.0%), SHA3-256 HD = 132/256 bits ( 51.6%)
+  S04 (  61 B | flip_one_bit   ): SHA-256 HD = 128/256 bits ( 50.0%), SHA3-256 HD = 133/256 bits ( 52.0%)
+  S05 (  39 B | flip_one_bit   ): SHA-256 HD = 122/256 bits ( 47.7%), SHA3-256 HD = 124/256 bits ( 48.4%)
+  S06 (  18 B | flip_one_bit   ): SHA-256 HD = 139/256 bits ( 54.3%), SHA3-256 HD = 136/256 bits ( 53.1%)
+  S07 (  20 B | flip_one_bit   ): SHA-256 HD = 120/256 bits ( 46.9%), SHA3-256 HD = 138/256 bits ( 53.9%)
+  S08 ( 116 B | flip_one_bit   ): SHA-256 HD = 145/256 bits ( 56.6%), SHA3-256 HD = 112/256 bits ( 43.8%)
+  S09 ( 112 B | flip_one_bit   ): SHA-256 HD = 129/256 bits ( 50.4%), SHA3-256 HD = 132/256 bits ( 51.6%)
+  S10 (1024 B | flip_one_bit   ): SHA-256 HD = 120/256 bits ( 46.9%), SHA3-256 HD = 116/256 bits ( 45.3%)
+  S11 (1024 B | flip_one_bit   ): SHA-256 HD = 122/256 bits ( 47.7%), SHA3-256 HD = 133/256 bits ( 52.0%)
+  S12 (1024 B | flip_one_bit   ): SHA-256 HD = 128/256 bits ( 50.0%), SHA3-256 HD = 123/256 bits ( 48.0%)
+  S13 (1024 B | flip_one_bit   ): SHA-256 HD = 125/256 bits ( 48.8%), SHA3-256 HD = 113/256 bits ( 44.1%)
+  S14 (  15 B | flip_one_bit   ): SHA-256 HD = 133/256 bits ( 52.0%), SHA3-256 HD = 135/256 bits ( 52.7%)
+  S15 (  16 B | flip_one_bit   ): SHA-256 HD = 125/256 bits ( 48.8%), SHA3-256 HD = 113/256 bits ( 44.1%)
+  S16 (  17 B | flip_one_bit   ): SHA-256 HD = 140/256 bits ( 54.7%), SHA3-256 HD = 123/256 bits ( 48.0%)
+  S17 (  61 B | flip_one_bit   ): SHA-256 HD = 128/256 bits ( 50.0%), SHA3-256 HD = 133/256 bits ( 52.0%)
+  S18 (  71 B | flip_one_bit   ): SHA-256 HD = 109/256 bits ( 42.6%), SHA3-256 HD = 128/256 bits ( 50.0%)
+----------------------------------------------------------------------------------------
+  Trung bình khoảng cách Hamming (18 mẫu): SHA-256 = 128.83/256 bits (50.33%), SHA3-256 = 127.06/256 bits (49.63%)
+
+[PHẦN 2] MA TRẬN TC01–TC09 — PROFILE CHÍNH SHA-256(file_bytes) (SHA3-256 xem dòng 4 Phần 3)
+----------------------------------------------------------------------------------------
+  TC01 (Nguyên vẹn                            ): status=[ACCEPT:18                          ] | expectation_match=18/18 | detection=N/A
+  TC02 (Sửa nội dung giữ bằng chứng cũ        ): status=[REJECT:18                          ] | expectation_match=18/18 | detection=18/18 (100.0%)
+  TC03 (Thay cả tệp và SHA-256 được gửi kèm   ): status=[ACCEPT_UNTRUSTED:18                ] | expectation_match=18/18 | detection=0/18 (0.0%)
+  TC04 (Khóa sai                              ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
+  TC05 (Thẻ HMAC bị sửa                       ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
+  TC06 (Thẻ AEAD bị sửa                       ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
+  TC07 (Metadata bị sửa                       ): status=[ACCEPT_METADATA_OUTSIDE_SCOPE:18   ] | expectation_match=18/18 | detection=N/A
+  TC08 (Nonce AEAD sai                        ): status=[NOT_APPLICABLE:18                  ] | expectation_match=18/18 | detection=N/A
+  TC09 (Cắt ngắn nội dung                     ): status=[NOT_APPLICABLE:1, REJECT:17        ] | expectation_match=18/18 | detection=17/17 (100.0%)
+----------------------------------------------------------------------------------------
+[PHẦN 3] TỔNG HỢP TỶ LỆ PHÁT HIỆN THEO QUY ƯỚC ĐỀ TÀI (data/README.md)
+  1. Tập sửa nội dung có bằng chứng tham chiếu tin cậy (TC02 + TC09): 35/35 (100.00%)
+  2. TC03 (thay cả tệp và hash đi kèm, trình bày RIÊNG, không gộp vào tỷ lệ chung): phát hiện 0/18; 18/18 mẫu ACCEPT_UNTRUSTED (đúng kỳ vọng — đây là minh chứng giới hạn của hash thuần, không phải lỗi chương trình)
+  3. Không đưa vào mẫu số: TC01 (control), TC07 (metadata ngoài phạm vi file-only), TC04/TC05/TC06/TC08 (NOT_APPLICABLE), TC09 trên S01 rỗng.
+  4. Đối chiếu SHA3-256 trên cùng 162 ca: 162/162 ca có trạng thái đúng kỳ vọng (chi tiết: hash_sha3_cross_check.csv)
+========================================================================================

@@ -1,0 +1,49 @@
+DEMO SỬA TỆP VÀ THAY HASH ĐI KÈM (SHA-256 thuần)
+================================================================================
+
+[B0] Bên gửi tạo manifest; bản đi kèm gói + bản tham chiếu tách riêng
+$ python tools/hash_cli.py manifest-create results/hash/demo/goi_gui -o results/hash/demo/goi_gui.manifest
+  Wrote 2 entries to results/hash/demo/goi_gui.manifest
+  [exit code = 0]
+SHA-256 f93b84b54f27b3c439bec763f82b06b82b5a0155c7f77382aeb83a5eba4019cb don_hang.json
+SHA-256 8da6bd024838e0330245a5a3264c2ffb909d3713e334fb55b26c58f32f80fe6d sinh_vien.csv
+
+[B1] Kiểm tra gói nguyên vẹn bằng manifest đi kèm
+$ python tools/hash_cli.py manifest-check results/hash/demo/goi_gui.manifest
+  OK      don_hang.json
+  OK      sinh_vien.csv
+  Summary: 2/2 OK
+  [exit code = 0]
+
+[B2] Kẻ tấn công sửa amount 120000 -> 920000, KHÔNG sửa manifest
+  nội dung mới: {"amount":920000,"currency":"VND","items":[{"quantity":2,"sku":"SAMPLE-01"}],"order_id":"DEMO-001","synthetic":true}
+$ python tools/hash_cli.py manifest-check results/hash/demo/goi_gui.manifest
+  FAILED  don_hang.json
+  OK      sinh_vien.csv
+  Summary: 1/2 OK
+  [exit code = 1]
+
+[B3] Kẻ tấn công tính lại hash và GHI ĐÈ manifest đi kèm gói
+$ python tools/hash_cli.py manifest-create results/hash/demo/goi_gui -o results/hash/demo/goi_gui.manifest
+  Wrote 2 entries to results/hash/demo/goi_gui.manifest
+  [exit code = 0]
+$ python tools/hash_cli.py manifest-check results/hash/demo/goi_gui.manifest
+  OK      don_hang.json
+  OK      sinh_vien.csv
+  Summary: 2/2 OK
+  [exit code = 0]
+
+[B4] Người nhận kiểm tra bằng manifest tham chiếu lưu tách riêng
+$ python tools/hash_cli.py manifest-check results/hash/demo/kenh_tin_cay/goi_gui.manifest --base-dir results/hash/demo/goi_gui
+  FAILED  don_hang.json
+  OK      sinh_vien.csv
+  Summary: 1/2 OK
+  [exit code = 1]
+
+================================================================================
+TÓM TẮT (exit 0 = chấp nhận, 1 = phát hiện sai khác)
+  B1_intact                        exit=0 | kỳ vọng=0 | ĐÚNG
+  B2_tamper_keep_manifest          exit=1 | kỳ vọng=1 | ĐÚNG
+  B3_tamper_and_replace_manifest   exit=0 | kỳ vọng=0 | ĐÚNG
+  B4_trusted_reference             exit=1 | kỳ vọng=1 | ĐÚNG
+Kết luận: B3 cho thấy hash đi cùng kênh với tệp không chứng minh nguồn gốc; B4 cho thấy hash chỉ có giá trị khi tham chiếu được bảo vệ độc lập.

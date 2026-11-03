@@ -1,0 +1,12 @@
+{
+  "run_id": "BENCH-N18-RUN02",
+  "cpu": "AMD Ryzen 7 8745H with Radeon 780M Graphics",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "openssl": "OpenSSL 3.0.16 11 Feb 2025",
+  "repeats": 35,
+  "warmup": 5,
+  "timer": "time.perf_counter_ns",
+  "io_included_true_means": "open+read with warm OS page cache (not cold physical disk)",
+  "file_chunk_size_bytes": 65536
+}
